@@ -6,9 +6,14 @@ import styled from "styled-components";
 
 import breakpoint from "./breakpoints";
 
+const AppDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const Body = styled.div`
   @media only screen and ${breakpoint.device.xs} {
-    margin: 4px;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
@@ -19,7 +24,7 @@ const Body = styled.div`
   }
 
   @media only screen and ${breakpoint.device.sm} {
-    margin: 16px 32px 16px 32px;
+    margin: 16px;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
@@ -34,7 +39,7 @@ const Body = styled.div`
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: auto; 
-    gap: 16px 16px; 
+    gap: 16px;
     grid-template-areas: 
       "input output"; 
   }
@@ -42,13 +47,13 @@ const Body = styled.div`
 
 function App() {
   return (
-    <div className="App">
+    <AppDiv className="App">
       <Header />
       <Body>
         <Input />
         <Output />
       </Body>
-    </div>
+    </AppDiv>
   );
 }
 

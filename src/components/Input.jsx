@@ -6,18 +6,7 @@ import MinimizeIcon from "@mui/icons-material/Minimize";
 import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { IconButton } from "@mui/material";
-
-const Container = styled.div`
-  width: 100%;
-  height: 500px;
-  display: grid;
-  grid-template-columns: auto auto 32px 32px;
-  grid-template-rows: 32px auto;
-  gap: 8px;
-  grid-template-areas:
-    "label   .       clear   resize"
-    "input   input   input   input";
-`;
+import { OuterContainer, Container, HeaderText } from "../styled-components";
 
 const TextInput = styled.textarea`
   grid-area: input;
@@ -25,14 +14,7 @@ const TextInput = styled.textarea`
   height: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  grid-area: input;
-`;
-
-const HeaderText = styled.div`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  grid-area: label;
+  grid-area: window;
 `;
 
 const Input = (props) => {
@@ -42,33 +24,35 @@ const Input = (props) => {
   const [isMaximized, setIsMaximized] = useState(false);
 
   return (
-    <Container>
-      <HeaderText>
-        <CreateIcon />
-        <span>Editor</span>
-      </HeaderText>
-      <IconButton
-        aria-label="clear text"
-        size="large"
-        onClick={() => setText("")}
-        gridArea="clear"
-      >
-        <DeleteIcon />
-      </IconButton>
-      <IconButton
-        area-label={isMaximized ? "minimize" : "maximize"}
-        size="large"
-        onClick={() => setIsMaximized(!isMaximized)}
-        gridArea="resize"
-      >
-        {isMaximized ? <MinimizeIcon /> : <AddIcon />}
-      </IconButton>
-      <TextInput
-        id="editor"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-      />
-    </Container>
+    <OuterContainer>
+      <Container>
+        <HeaderText>
+          <CreateIcon />
+          <span>&nbsp;Editor</span>
+        </HeaderText>
+        <IconButton
+          aria-label="clear text"
+          size="large"
+          onClick={() => setText("")}
+          style={{ gridArea: "clear", color: "#444" }}
+        >
+          <DeleteIcon />
+        </IconButton>
+        <IconButton
+          area-label={isMaximized ? "minimize" : "maximize"}
+          size="large"
+          onClick={() => setIsMaximized(!isMaximized)}
+          style={{ gridArea: "resize", color: "#444" }}
+        >
+          {isMaximized ? <MinimizeIcon /> : <AddIcon />}
+        </IconButton>
+        <TextInput
+          id="editor"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        />
+      </Container>
+    </OuterContainer>
   );
 };
 
