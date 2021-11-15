@@ -1,0 +1,28 @@
+
+@media only screen and (min-width: 320px) {
+  img {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  img {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  img {
+    max-width: 100%;
+  }
+}
+
+/* div {
+  overflow-x: scroll;
+} */
+pre {
+  overflow-x: scroll;
+}
+code {
+  overflow-x: scroll;
+}
