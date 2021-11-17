@@ -7,13 +7,11 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 import {
-  Button,
   Dialog,  
   DialogContent,
   DialogTitle,
   IconButton,
   Slide,
-  Typography
 } from "@mui/material";
 import hljs from "highlight.js";
 

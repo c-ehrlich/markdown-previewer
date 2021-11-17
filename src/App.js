@@ -1,5 +1,4 @@
 import "./App.css";
-import { useEffect } from "react";
 
 import useStore from "./store";
 
@@ -10,13 +9,7 @@ import styled from "styled-components";
 
 import breakpoint from "./breakpoints";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Box, Button, Paper, Switch, Typography } from "@mui/material";
-
-const AppDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+import { Box, Paper, Switch } from "@mui/material";
 
 const Body = styled.div`
   @media only screen and ${breakpoint.device.xs} {

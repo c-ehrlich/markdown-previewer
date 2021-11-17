@@ -1,30 +1,49 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import * as React from "react";
+
+import {
+  AppBar,
+  Box,
+  FormControlLabel,
+  IconButton,
+  Toolbar,
+  Typography,
+  Switch,
+} from "@mui/material";
+
+import MenuIcon from "@mui/icons-material/Menu";
+
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMarkdown } from "@fortawesome/free-brands-svg-icons";
+
+import useStore from "../store";
 
 export default function ButtonAppBar() {
+  const dark = useStore((state) => state.dark);
+  const setDark = useStore((state) => state.setDark);
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" component="div" className={classes.title} sx={{ flexGrow: 1 }}>
-            Markdown Previewer
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <FontAwesomeIcon icon={faMarkdown} />  Markdown Previewer
           </Typography>
-          <Button color="inherit">Login</Button>
+          <FormControlLabel
+            control={
+              <Switch
+                checked={dark}
+                onChange={() => setDark(!dark)}
+                name="gilad"
+              />
+            }
+            labelPlacement="start"
+            label={ dark ? "Dark Mode" : "Light Mode" }
+          />
         </Toolbar>
       </AppBar>
     </Box>
