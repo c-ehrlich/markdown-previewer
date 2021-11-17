@@ -48,6 +48,8 @@ And here. | Okay. | I think we get it.
 const useStore = create((set) => ({
   text: placeholder,
   setText: (text) => set((state) => ({...state, text})),
+  dark: true,
+  setDark: (dark) => set((state) => ({...state, dark})),
 }));
 
 export default useStore;
