@@ -7,14 +7,9 @@ export const HeaderText = styled.div`
   grid-area: label;
 `;
 
-export const OuterContainer = styled.div`
-  background-color: #dddddd;
-  padding: 8px;
-`;
-
 export const Container = styled.div`
-  width: 100%;
-  height: 500px;
+  ${'' /* width: 100%; */}
+  ${'' /* height: 500px; */}
   display: grid;
   grid-template-columns: auto auto 32px;
   grid-template-rows: 32px auto;

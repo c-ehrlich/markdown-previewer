@@ -2,16 +2,22 @@ import React, { useEffect, useState } from "react";
 import useStore from "../store";
 import { marked } from "marked";
 import styled from "styled-components";
-import { OuterContainer, Container, HeaderText } from "../styled-components";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
-import AddIcon from "@mui/icons-material/Add";
+import { Container, HeaderText } from "../styled-components";
 import CloseIcon from "@mui/icons-material/Close";
+import FullscreenIcon from "@mui/icons-material/Fullscreen";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
 import {
-  Dialog,  
+  Card,
+  CardHeader,
+  CardContent,
+  Dialog,
   DialogContent,
   DialogTitle,
+  Divider,
+  Grid,
   IconButton,
   Slide,
+  Tooltip,
 } from "@mui/material";
 import hljs from "highlight.js";
 
@@ -102,22 +108,24 @@ const Output = () => {
   };
 
   return (
-    <OuterContainer>
-      <Container>
-        <HeaderText>
-          <MenuBookIcon />
-          <span>&nbsp;Previewer</span>
-        </HeaderText>
-        <IconButton
-          area-label="maximize"
-          size="large"
-          onClick={handleOpenModal}
-          style={{ gridArea: "button", color: "#444" }}
-        >
-          <AddIcon />
-        </IconButton>
+    <Grid item xs={12} md={6} sx={{ height: "100%", overflowY: "scroll" }}>
+      <Card>
+        <CardHeader
+          title="Preview"
+          action={
+            <Tooltip title="Fullscreen" arrow>
+              <IconButton
+                area-label="maximize"
+                onClick={handleOpenModal}
+              >
+                <FullscreenIcon />
+              </IconButton>
+            </Tooltip>
+          }
+        />
+        <Divider />
         <HtmlPreview id="preview" dangerouslySetInnerHTML={createMarkup()} />
-      </Container>
+      </Card>
       <SwipeInDialog
         open={modalOpen}
         TransitionComponent={Transition}
@@ -126,16 +134,18 @@ const Output = () => {
         maxWidth="xl"
         fullWidth={false}
       >
-        <SwipeInDialogTitle id="markdown-modal-title" onClose={handleCloseModal}>
-          Large Previewer
-        </SwipeInDialogTitle> 
+        <SwipeInDialogTitle
+          id="markdown-modal-title"
+          onClose={handleCloseModal}
+        >
+          Fullscreen Preview
+        </SwipeInDialogTitle>
+        <Divider />
         <DialogContent>
-          <div dangerouslySetInnerHTML={createMarkup()} />
-          <div dangerouslySetInnerHTML={createMarkup()} />
           <div dangerouslySetInnerHTML={createMarkup()} />
         </DialogContent>
       </SwipeInDialog>
-    </OuterContainer>
+    </Grid>
   );
 };
 

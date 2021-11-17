@@ -2,7 +2,16 @@ import useStore from "../store";
 import styled from "styled-components";
 import CreateIcon from "@mui/icons-material/Create";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { IconButton } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  Divider,
+  Grid,
+  IconButton,
+  Tooltip,
+  Typography,
+} from "@mui/material";
 import { OuterContainer, Container, HeaderText } from "../styled-components";
 
 const TextInput = styled.textarea`
@@ -19,28 +28,31 @@ const Input = (props) => {
   const setText = useStore((state) => state.setText);
 
   return (
-    <OuterContainer>
-      <Container>
-        <HeaderText>
-          <CreateIcon />
-          <span>&nbsp;Editor</span>
-        </HeaderText>
-        <IconButton
-          aria-label="clear text"
-          size="large"
-          onClick={() => setText("")}
-          style={{ gridArea: "button", color: "#444" }}
-        >
-          <DeleteIcon />
-        </IconButton>
-        <TextInput
-          id="editor"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
+    <Grid item xs={12} md={6}>
+      <Card variant="outlined">
+        <CardHeader
+          title="Editor"
+          action={
+            <Tooltip title="Clear Text" arrow>
+              <IconButton area-label="clear text" onClick={() => setText("")}>
+                <DeleteIcon />
+              </IconButton>
+            </Tooltip>
+          }
         />
-      </Container>
-      
-    </OuterContainer>
+        <Divider />
+        <CardContent>
+          <Typography>
+            Hello
+          </Typography>
+          <TextInput
+            id="editor"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+        </CardContent>
+      </Card>
+    </Grid>
   );
 };
 
