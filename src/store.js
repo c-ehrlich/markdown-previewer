@@ -5,7 +5,7 @@ const placeholder = `# Welcome to my React Markdown Previewer!
 ## This is a sub-heading...
 ### And here's some other cool stuff:
 
-Heres some code, \`<div></div>\`, between 2 backticks.
+Here's some code, \`<div></div>\`, between 2 backticks.
 
 \`\`\`
 // this is multi-line code:
