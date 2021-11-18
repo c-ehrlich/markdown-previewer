@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/markdown-previewer/static/css/main.b7d2c5ee.chunk.css",
+    "main.js": "/markdown-previewer/static/js/main.14d02e0e.chunk.js",
+    "main.js.map": "/markdown-previewer/static/js/main.14d02e0e.chunk.js.map",
+    "runtime-main.js": "/markdown-previewer/static/js/runtime-main.0ba7e797.js",
+    "runtime-main.js.map": "/markdown-previewer/static/js/runtime-main.0ba7e797.js.map",
+    "static/css/2.6303ede8.chunk.css": "/markdown-previewer/static/css/2.6303ede8.chunk.css",
+    "static/js/2.b1afcb65.chunk.js": "/markdown-previewer/static/js/2.b1afcb65.chunk.js",
+    "static/js/2.b1afcb65.chunk.js.map": "/markdown-previewer/static/js/2.b1afcb65.chunk.js.map",
+    "static/js/3.757151b1.chunk.js": "/markdown-previewer/static/js/3.757151b1.chunk.js",
+    "static/js/3.757151b1.chunk.js.map": "/markdown-previewer/static/js/3.757151b1.chunk.js.map",
+    "index.html": "/markdown-previewer/index.html",
+    "static/css/2.6303ede8.chunk.css.map": "/markdown-previewer/static/css/2.6303ede8.chunk.css.map",
+    "static/css/main.b7d2c5ee.chunk.css.map": "/markdown-previewer/static/css/main.b7d2c5ee.chunk.css.map",
+    "static/js/2.b1afcb65.chunk.js.LICENSE.txt": "/markdown-previewer/static/js/2.b1afcb65.chunk.js.LICENSE.txt",
+    "static/media/300.css": "/markdown-previewer/static/media/roboto-vietnamese-300-normal.af9afdc1.woff2",
+    "static/media/400.css": "/markdown-previewer/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2",
+    "static/media/500.css": "/markdown-previewer/static/media/roboto-vietnamese-500-normal.b8e494da.woff2",
+    "static/media/700.css": "/markdown-previewer/static/media/roboto-vietnamese-700-normal.3096f18a.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0ba7e797.js",
+    "static/css/2.6303ede8.chunk.css",
+    "static/js/2.b1afcb65.chunk.js",
+    "static/css/main.b7d2c5ee.chunk.css",
+    "static/js/main.14d02e0e.chunk.js"
+  ]
+}
