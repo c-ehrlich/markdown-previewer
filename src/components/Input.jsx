@@ -16,8 +16,8 @@ const Input = (props) => {
   const setText = useStore((state) => state.setText);
 
   return (
-    <Grid item xs={12} md={6} sx={{ height: "auto" }}>
-      <Card variant="outlined">
+    <Grid item xs={12} md={6}>
+      <Card variant="outlined" height="100%">
         <CardHeader
           title="Editor"
           action={
@@ -29,14 +29,15 @@ const Input = (props) => {
           }
         />
         <Divider />
-        <CardContent>
+        <CardContent height={300}>
           <TextField
             value={text}
             onChange={(e) => setText(e.target.value)}
             id="editor"
+            rows={12}
             fullWidth
             multiline
-            rows={16}
+            height="100%"
             label="Markdown"
             variant="filled"
             inputProps={{style: {fontFamily: "Monospace"}}}

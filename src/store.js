@@ -46,7 +46,7 @@ And here. | Okay. | I think we get it.
 `;
 
 const useStore = create((set) => ({
-  text: "test",
+  text: placeholder,
   setText: (text) => set((state) => ({...state, text})),
   dark: false,
   setDark: (dark) => set((state) => ({...state, dark})),

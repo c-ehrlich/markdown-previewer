@@ -4,6 +4,7 @@ import { marked } from "marked";
 import CloseIcon from "@mui/icons-material/Close";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import {
+  Box,
   Card,
   CardContent,
   CardHeader,
@@ -16,7 +17,6 @@ import {
   Slide,
   Tooltip,
 } from "@mui/material";
-
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -79,23 +79,33 @@ const Output = () => {
   };
 
   return (
-    <Grid item xs={12} md={6} sx={{ height: "100%", overflowY: "scroll" }}>
-      <Card variant="outlined">
+    <Grid item xs={12} md={6} sx={{ minHeight: "100%", overflowY: "scroll" }}>
+      <Card
+        variant="outlined"
+        sx={{
+          minHeight: "calc(100% - 2px)",
+          maxHeight: "calc(100% - 2px)",
+          overflow: "scroll",
+        }}
+      >
         <CardHeader
           title="Preview"
           action={
             <Tooltip title="Fullscreen" arrow>
-              <IconButton
-                area-label="maximize"
-                onClick={handleOpenModal}
-              >
+              <IconButton area-label="maximize" onClick={handleOpenModal}>
                 <FullscreenIcon />
               </IconButton>
             </Tooltip>
           }
         />
         <Divider />
-        <CardContent id="preview" dangerouslySetInnerHTML={createMarkup()} sx={{ maxWidth: "100%", overflow: "scroll" }} />
+        <CardContent sx={{ maxHeight: "300px", overflow: "scroll" }}>
+          <Box
+            id="preview"
+            dangerouslySetInnerHTML={createMarkup()}
+            sx={{ maxWidth: "100%", overflow: "scroll" }}
+          />
+        </CardContent>
       </Card>
       <Dialog
         open={modalOpen}

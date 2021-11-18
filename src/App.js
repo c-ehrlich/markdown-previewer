@@ -22,12 +22,15 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Box flexDirection="column" className="App" sx={{ minHeight: "100vh", bgcolor: dark ? "#000" : "#f8fcff" }}>
-        <Box flex={1} overflow="auto" >
+        <Box flex={1}>
           <Header />
           <Grid
             container
             p={2}
             spacing={2}
+            dirction="row"
+            justifyContent="center"
+            alignItems="stretch"
             sx={{ marginTop: 1 }}
           >
             <Input />
