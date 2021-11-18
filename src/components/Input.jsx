@@ -39,7 +39,6 @@ const Input = (props) => {
             rows={16}
             label="Markdown"
             variant="standard"
-            defaultValue="Default Value"
             inputProps={{style: {fontFamily: "Monospace"}}}
           />
         </CardContent>
