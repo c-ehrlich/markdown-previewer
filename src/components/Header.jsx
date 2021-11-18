@@ -27,7 +27,6 @@ export default function ButtonAppBar() {
   const setDark = useStore((state) => state.setDark);
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -46,6 +45,5 @@ export default function ButtonAppBar() {
           />
         </Toolbar>
       </AppBar>
-    </Box>
   );
 }

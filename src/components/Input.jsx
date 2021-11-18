@@ -28,7 +28,7 @@ const Input = (props) => {
   const setText = useStore((state) => state.setText);
 
   return (
-    <Grid item xs={12} md={6}>
+    <Grid item xs={12} md={6} sx={{ height: "auto" }}>
       <Card variant="outlined">
         <CardHeader
           title="Editor"
@@ -42,9 +42,6 @@ const Input = (props) => {
         />
         <Divider />
         <CardContent>
-          <Typography>
-            Hello
-          </Typography>
           <TextInput
             id="editor"
             value={text}

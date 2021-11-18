@@ -7,6 +7,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import {
+  Box,
   Card,
   CardHeader,
   CardContent,
@@ -109,7 +110,7 @@ const Output = () => {
 
   return (
     <Grid item xs={12} md={6} sx={{ height: "100%", overflowY: "scroll" }}>
-      <Card>
+      <Card variant="outlined">
         <CardHeader
           title="Preview"
           action={
@@ -124,7 +125,9 @@ const Output = () => {
           }
         />
         <Divider />
-        <HtmlPreview id="preview" dangerouslySetInnerHTML={createMarkup()} />
+        <Box>
+          <HtmlPreview id="preview" dangerouslySetInnerHTML={createMarkup()} />
+        </Box>
       </Card>
       <SwipeInDialog
         open={modalOpen}

@@ -4,7 +4,6 @@ import { useState } from "react";
 
 import useStore from "./store";
 
-
 import Header from "./components/Header";
 import Input from "./components/Input";
 import Output from "./components/Output";
@@ -20,31 +19,23 @@ function App() {
     palette: {
       mode: dark ? "dark" : "light",
     },
-    title: {
-      flexGrow: 1,
-      textAlign: "center",
-    },
   });
-
-
 
   return (
     <ThemeProvider theme={theme}>
-      <Box flexDirection="column" className="App">
-        <Box flex={1} overflow="auto">
-          <Paper
-            sx={{
-              height: "100vh",
-              // TODO change
-            }}
+      <Box flexDirection="column" className="App" sx={{ minHeight: "100vh", bgcolor: dark ? "#000" : "#f8fcff" }}>
+        <Box flex={1} overflow="auto" >
+          <Header />
+          <Grid
+            container
+            p={2}
+            spacing={2}
+            sx={{ marginTop: 1 }}
           >
-            <Header />
-            <Grid container spacing={2} p={2}>
-              <Input />
-              <Output />
-            </Grid>
+            <Input />
+            <Output />
             <MoreInfo />
-          </Paper>
+          </Grid>
         </Box>
       </Box>
     </ThemeProvider>
