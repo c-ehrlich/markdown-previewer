@@ -80,7 +80,7 @@ const Output = () => {
 
   return (
     <Grid item xs={12} md={6} sx={{ height: "100%", overflowY: "scroll" }}>
-      <Card variant="outlined" height={300}>
+      <Card variant="outlined">
         <CardHeader
           title="Preview"
           action={

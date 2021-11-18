@@ -38,7 +38,7 @@ const Input = (props) => {
             multiline
             rows={16}
             label="Markdown"
-            variant="standard"
+            variant="filled"
             inputProps={{style: {fontFamily: "Monospace"}}}
           />
         </CardContent>
