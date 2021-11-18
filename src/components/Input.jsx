@@ -8,6 +8,7 @@ import {
   Divider,
   Grid,
   IconButton,
+  TextField,
   Tooltip,
 } from "@mui/material";
 
@@ -39,10 +40,17 @@ const Input = (props) => {
         />
         <Divider />
         <CardContent>
-          <TextInput
-            id="editor"
+          <TextField
             value={text}
             onChange={(e) => setText(e.target.value)}
+            id="editor"
+            fullWidth
+            multiline
+            rows={16}
+            label="Markdown"
+            variant="standard"
+            defaultValue="Default Value"
+            inputProps={{style: {fontFamily: "Monospace"}}}
           />
         </CardContent>
       </Card>
