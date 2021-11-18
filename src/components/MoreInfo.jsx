@@ -11,7 +11,6 @@ import {
   Typography,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import SelectInput from "@mui/material/Select/SelectInput";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;

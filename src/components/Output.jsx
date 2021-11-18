@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useStore from "../store";
 import { marked } from "marked";
-import hljs from "highlight.js";
 import CloseIcon from "@mui/icons-material/Close";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import {
@@ -81,7 +80,7 @@ const Output = () => {
 
   return (
     <Grid item xs={12} md={6} sx={{ height: "100%", overflowY: "scroll" }}>
-      <Card variant="outlined">
+      <Card variant="outlined" height={300}>
         <CardHeader
           title="Preview"
           action={

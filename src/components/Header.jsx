@@ -2,15 +2,11 @@ import * as React from "react";
 
 import {
   AppBar,
-  Box,
   FormControlLabel,
-  IconButton,
   Toolbar,
   Typography,
   Switch,
 } from "@mui/material";
-
-import MenuIcon from "@mui/icons-material/Menu";
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
