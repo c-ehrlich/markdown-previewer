@@ -1,7 +1,7 @@
 {
   "name": "01-markdown",
-  "homepage": "https://c-ehrlich.github.io/markdown-previewer",
   "version": "0.1.0",
+  "homepage": "https://c-ehrlich.github.io/markdown-previewer",
   "private": true,
   "dependencies": {
     "@emotion/styled": "^11.6.0",
