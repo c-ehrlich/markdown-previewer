@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useStore from "../store";
 import { marked } from "marked";
+import hljs from "highlight.js";
 import CloseIcon from "@mui/icons-material/Close";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import {
@@ -16,7 +17,6 @@ import {
   Slide,
   Tooltip,
 } from "@mui/material";
-import hljs from "highlight.js";
 
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -37,7 +37,6 @@ const SwipeInDialogTitle = (props) => {
             position: "absolute",
             right: 8,
             top: 8,
-            // color: (theme) => theme.palette.grey[500],
           }}
         >
           <CloseIcon />
@@ -53,13 +52,6 @@ const Output = () => {
 
   marked.setOptions({
     renderer: new marked.Renderer(),
-    highlight: function (code, lang) {
-      // TODO: get highlighting working!
-      // const hljs = require('highlight.js');
-      const language = hljs.getLanguage(lang) ? lang : "plaintext";
-      return hljs.highlight(code, { language }).value;
-    },
-    langPrefix: "hljs language-", // highlight.js css expects a top-level 'hljs' class.
     pedantic: false,
     gfm: true,
     breaks: true,
