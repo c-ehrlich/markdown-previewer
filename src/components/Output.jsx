@@ -112,8 +112,8 @@ const Output = () => {
         TransitionComponent={Transition}
         keepMounted
         onClose={handleCloseModal}
-        maxWidth="xl"
-        fullWidth={false}
+        maxWidth="md"
+        fullWidth={true}
       >
         <SwipeInDialogTitle
           id="markdown-modal-title"

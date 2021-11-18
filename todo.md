@@ -9,7 +9,6 @@
 [x] maybe the large previewer should also have a close button?
 [x] Text input field should match theme in dark mode
 [x] Output field should match theme in dark mode
-[ ] get rid of SwipeInDialogTitle, just put that stuff in the main jsx
-[ ] The modal is too narrow if there are no long lines in the markdown. Give it a min width or something?
+[x] The modal is too narrow if there are no long lines in the markdown. Give it a min width or something?
 
 [ ] deploy
