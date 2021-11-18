@@ -2,15 +2,12 @@ import React, { useEffect, useState } from "react";
 import useStore from "../store";
 import { marked } from "marked";
 import styled from "styled-components";
-import { Container, HeaderText } from "../styled-components";
 import CloseIcon from "@mui/icons-material/Close";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
 import {
   Box,
   Card,
   CardHeader,
-  CardContent,
   Dialog,
   DialogContent,
   DialogTitle,

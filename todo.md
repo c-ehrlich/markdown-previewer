@@ -8,5 +8,7 @@
 [x] Large previewer modal is missing lines between sections
 [x] maybe the large previewer should also have a close button?
 [ ] Change grid container p based on breakpoints
+[ ] Text input field should match theme in dark mode
+[ ] Output field should match theme in dark mode
 
 [ ] deploy

@@ -1,6 +1,5 @@
 import useStore from "../store";
 import styled from "styled-components";
-import CreateIcon from "@mui/icons-material/Create";
 import DeleteIcon from "@mui/icons-material/Delete";
 import {
   Card,
@@ -10,9 +9,7 @@ import {
   Grid,
   IconButton,
   Tooltip,
-  Typography,
 } from "@mui/material";
-import { OuterContainer, Container, HeaderText } from "../styled-components";
 
 const TextInput = styled.textarea`
   grid-area: input;

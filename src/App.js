@@ -1,7 +1,5 @@
 import "./App.css";
 
-import { useState } from "react";
-
 import useStore from "./store";
 
 import Header from "./components/Header";
@@ -9,7 +7,7 @@ import Input from "./components/Input";
 import Output from "./components/Output";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { Box, Grid, Paper } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import MoreInfo from "./components/MoreInfo";
 
 function App() {
