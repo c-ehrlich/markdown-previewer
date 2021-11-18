@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import useStore from "../store";
 import { marked } from "marked";
-import styled from "styled-components";
 import CloseIcon from "@mui/icons-material/Close";
 import FullscreenIcon from "@mui/icons-material/Fullscreen";
 import {
-  Box,
   Card,
+  CardContent,
   CardHeader,
   Dialog,
   DialogContent,
@@ -19,27 +18,10 @@ import {
 } from "@mui/material";
 import hljs from "highlight.js";
 
-const HtmlPreview = styled.div`
-  grid-area: window;
-  background-color: white;
-  padding: 4px 8px 4px 8px;
-  text-align: left;
-  max-width: 100%;
-  overflow-x: scroll;
-`;
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
-
-const SwipeInDialog = styled(Dialog)(({ theme }) => ({
-  "& .MuiDialogContent-root": {
-    // padding: theme.spacing(2),
-  },
-  "& .MuiDialogActions-root": {
-    // padding: theme.spacing(1),
-  },
-}));
 
 const SwipeInDialogTitle = (props) => {
   const { children, onClose, ...other } = props;
@@ -55,7 +37,7 @@ const SwipeInDialogTitle = (props) => {
             position: "absolute",
             right: 8,
             top: 8,
-            color: (theme) => theme.palette.grey[500],
+            // color: (theme) => theme.palette.grey[500],
           }}
         >
           <CloseIcon />
@@ -122,11 +104,9 @@ const Output = () => {
           }
         />
         <Divider />
-        <Box>
-          <HtmlPreview id="preview" dangerouslySetInnerHTML={createMarkup()} />
-        </Box>
+        <CardContent id="preview" dangerouslySetInnerHTML={createMarkup()} sx={{ maxWidth: "100%", overflow: "scroll" }} />
       </Card>
-      <SwipeInDialog
+      <Dialog
         open={modalOpen}
         TransitionComponent={Transition}
         keepMounted
@@ -144,7 +124,7 @@ const Output = () => {
         <DialogContent>
           <div dangerouslySetInnerHTML={createMarkup()} />
         </DialogContent>
-      </SwipeInDialog>
+      </Dialog>
     </Grid>
   );
 };
