@@ -1,6 +1,7 @@
 {
-  "name": "01-markdown",
-  "version": "0.1.0",
+  "name": "markdown-converter",
+  "author": "Christopher Ehrlich",
+  "version": "1.0.0",
   "homepage": "https://c-ehrlich.github.io/markdown-previewer",
   "private": true,
   "dependencies": {
