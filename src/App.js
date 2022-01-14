@@ -22,7 +22,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Box flexDirection="column" className="App" sx={{ minHeight: "100vh", bgcolor: dark ? "#000" : "#f8fcff" }}>
-        <Box flex={1}>
+        <Box flex={1} container display="flex" flexDirection="column" alignItems="center" justifyContent="center">
           <Header />
           <Grid
             container
@@ -31,7 +31,7 @@ function App() {
             dirction="row"
             justifyContent="center"
             alignItems="stretch"
-            sx={{ marginTop: 1 }}
+            sx={{ marginTop: 1, maxWidth: "xl" }}
           >
             <Input />
             <Output />
